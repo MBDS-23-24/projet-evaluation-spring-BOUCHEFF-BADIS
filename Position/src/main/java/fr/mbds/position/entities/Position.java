@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.util.List;
+
 @Getter @Setter @ToString @NoArgsConstructor @AllArgsConstructor @Builder
 @Entity
 public class Position {
