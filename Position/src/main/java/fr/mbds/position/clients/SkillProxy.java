@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "skill", url = "http://localhost:8081/")
+@FeignClient(name = "SKILL")
 
 public interface SkillProxy {
 
