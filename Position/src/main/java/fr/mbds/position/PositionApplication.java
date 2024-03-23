@@ -1,5 +1,6 @@
 package fr.mbds.position;
 
+import fr.mbds.position.clients.SkillProxy;
 import fr.mbds.position.entities.Position;
 import fr.mbds.position.repositories.PositionRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -19,19 +20,15 @@ public class PositionApplication {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner(PositionRepository positionRepository) {
+    CommandLineRunner commandLineRunner(PositionRepository positionRepository, SkillProxy skillProxy) {
         return args -> {
-            List<Position> positionsList = List.of(
-                    Position.builder()
-                            .name("Developpeur")
-                            .salaireMoyen(3000)
-                            .build(),
-                    Position.builder()
-                            .name("Product Owner")
-                            .salaireMoyen(3000)
-                            .build()
-            );
-            positionRepository.saveAll(positionsList);
+            Position position1 = new Position(1L, "Développeur", 3000, null, List.of(1L, 2L));
+            Position position2 = new Position(2L, "Product Owner", 3000, null, List.of(2L, 3L));
+            Position position3 = new Position(3L, "Designer", 3000, null, List.of(3L, 4L));
+
+            positionRepository.save(position1);
+            positionRepository.save(position2);
+            positionRepository.save(position3);
         };
     }
 

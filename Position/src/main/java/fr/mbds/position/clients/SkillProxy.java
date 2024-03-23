@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "position", url = "http://localhost:8080/")
+@FeignClient(name = "skill", url = "http://localhost:8081/")
 
 public interface SkillProxy {
 
-    @GetMapping("/position/{id}")
-    public Skill getSkill(@PathVariable Long id);
-    @GetMapping("/positions")
-    public List<Skill> getSkills();
+    @GetMapping("/skill/{id}")
+    public Skill getSkillById(@PathVariable Long id);
+    @GetMapping("/skills")
+    public List<Skill> getAllSkills();
 
 }
