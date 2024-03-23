@@ -46,6 +46,7 @@ Chaque étape du projet a été réalisée dans une branche distincte, ce qui pe
 - Gateway Dynamique : 4-3-dynamic-gateway
 - Circuit Breaker : 5-circuit-breaker
 - Service de Configuration : 6-config-service
+  
 Cette approche permet de suivre facilement le développement de chaque fonctionnalité et de faciliter la gestion des versions du projet.
 
 ## Difficultés rencontrées :
