@@ -22,10 +22,16 @@ public class SkillApplication {
 		return args -> {
 			List<Skill> accountList = List.of(
 					Skill.builder()
-							.nom("Python")
+							.name("Python")
 							.build(),
 					Skill.builder()
-							.nom("Java")
+							.name("Java")
+							.build(),
+					Skill.builder()
+							.name("C")
+							.build(),
+					Skill.builder()
+							.name("C++")
 							.build()
 			);
 			skillRepository.saveAll(accountList);
